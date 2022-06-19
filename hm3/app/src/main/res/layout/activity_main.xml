@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:padding="50dp"
+        android:background="@drawable/background"
+        >
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/chat"
+            android:textColor="#FFFFFF"
+            android:textSize="72sp"
+            android:layout_marginTop="50dp">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/chat_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-30dp"
+            android:layout_below="@id/header_title"
+            android:contentDescription="@string/image_description"
+            android:src="@drawable/chat_icon" />
+        <RelativeLayout
+            android:id="@+id/login_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/chat_icon"
+            android:layout_marginTop="60dp"
+            android:background="@color/white"
+            android:padding="30dp">
+            <TextView
+                android:id="@+id/username_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/username"
+                android:textSize="14dp"
+                android:textColor="#ab6580">
+
+            </TextView>
+            <EditText
+                android:id="@+id/username_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/username_label">
+            </EditText>
+            <TextView
+                android:id="@+id/password_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/password"
+                android:textSize="14dp"
+                android:textColor="#ab6580"
+                android:layout_below="@id/username_input"
+                android:layout_marginTop="20dp">
+
+            </TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/password_label"
+                android:inputType="textPassword">
+            </EditText>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/signin_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_wrapper"
+            android:background="@color/purple_500"
+            android:padding="10dp"
+
+            >
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/triangle_icon">
+
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/get_started"
+                android:textSize="22dp"
+                android:layout_marginLeft="130dp">
+            </TextView>
+        </LinearLayout>
+        <Button
+            android:id="@+id/redirect_signup_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signin_button"
+            android:text="@string/not_registered"
+            android:textAlignment="viewStart"
+            android:background=""
+            android:textColor="@color/white"
+            android:textSize="12dp">
+
+        </Button>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
