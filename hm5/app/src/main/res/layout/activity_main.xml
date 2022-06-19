@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="60dp">
+
+    <TextView
+        android:id="@+id/label1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="გარბენილი მანძილი"
+        android:textSize="16dp"
+        android:layout_marginTop="30dp"
+        >
+    </TextView>
+
+    <EditText
+        android:id="@+id/input1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_below="@id/label1"
+        />
+    <TextView
+        android:id="@+id/label2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="გაცურული მანძილი"
+        android:textSize="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/input1"
+        >
+    </TextView>
+
+    <EditText
+        android:id="@+id/input2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_below="@id/label2"
+        />
+
+    <TextView
+        android:id="@+id/label3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input2"
+        android:layout_marginTop="10dp"
+        android:text="მიღებული კალორია"
+        android:textSize="16dp">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/input3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_below="@id/label3"
+        />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:onClick="AddData"
+        android:text="შეყვანა" />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_button"
+        android:layout_marginTop="60dp"
+        android:columnCount="3"
+        android:rowCount="3">
+        <ImageView
+            android:id="@+id/run_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/header_title"
+            android:contentDescription="running icon"
+            android:src="@drawable/run_icon" />
+        <ImageView
+            android:id="@+id/swim_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/header_title"
+            android:contentDescription="running icon"
+            android:src="@drawable/swim_icon"
+            android:layout_marginLeft="56dp"
+            />
+        <ImageView
+            android:id="@+id/kcal_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/header_title"
+            android:contentDescription="running icon"
+            android:src="@drawable/kcal_icon"
+            android:layout_marginLeft="56dp"
+            />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="28dp"
+            />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="28dp"
+            android:layout_marginLeft="56dp"
+            />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="28dp"
+            android:layout_marginLeft="56dp"/>
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="28dp"
+            />
+
+    </GridLayout>
+
+</RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
