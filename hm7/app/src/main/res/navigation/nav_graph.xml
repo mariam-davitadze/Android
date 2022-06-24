@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.retrofitmethods.add_user_data.AddUserDataFragment"
+        android:label="registration_fragment"
+        tools:layout="@layout/registration_fragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.retrofitmethods.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_getSingleUserFragment"
+            app:destination="@id/getSingleUserFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_updateUserFragment"
+            app:destination="@id/updateUserFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_deleteUserFragment"
+            app:destination="@id/deleteUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/getSingleUserFragment"
+        android:name="com.example.retrofitmethods.get_single_user.GetSingleUserFragment"
+        android:label="get_single_user_fragment"
+        tools:layout="@layout/get_single_user_fragment" />
+    <fragment
+        android:id="@+id/updateUserFragment"
+        android:name="com.example.retrofitmethods.update_user.UpdateUserFragment"
+        android:label="update_user_fragment"
+        tools:layout="@layout/update_user_fragment" />
+    <fragment
+        android:id="@+id/deleteUserFragment"
+        android:name="com.example.retrofitmethods.delete_user.DeleteUserFragment"
+        android:label="delete_user_fragment"
+        tools:layout="@layout/delete_user_fragment" />
+</navigation>
